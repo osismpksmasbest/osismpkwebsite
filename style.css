@@ -51,6 +51,11 @@ body {
     margin-top: 100px
     }
 
+nav .logoimg {
+    transform: scale(0.85);
+    margin-left: -25px
+}
+
 .card-title {
   color: #262262;
   font-weight: bold;
