@@ -11,12 +11,11 @@ body {
 }
 
 .jumbotron {
-  background: url("./Resource/Jumbotron/bgsekolah.jpg") no-repeat center center;
+  /* */background: url("./Resource/Jumbotron/bgsekolah.jpg") no-repeat center center;
   background-size: cover;
   color: white;
-  height: 100vh;
-  background-position: center;
-  display: flex;
+  background-position: center; 
+  display: flex; 
   align-items: center;
   justify-content: center;
   position: relative; /* Ensure relative positioning for overlay */
@@ -47,6 +46,10 @@ body {
 .jumbotron .lead {
   color: #0b7012;
 }
+
+.py-5 {
+    margin-top: 100px
+    }
 
 .card-title {
   color: #262262;
