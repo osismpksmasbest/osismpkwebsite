@@ -92,12 +92,22 @@ h3 {
         font-size: 90%;
         }
   nav .logoimg {
-        margin-top: -10px;
+        margin-top: -5px;
         overflow: hidden;
         transform: scale(0.7);
         margin-left: -60px
     }
     #home .jumcontent {
             transform: scale(0.8);
+        }
+}
+
+@media (max-width: 379.81px) {
+    .teksosismpkalaz {
+        display: none;
+    }
+    nav .logoimg {
+        margin-left: -20px;
+        margin-top: 5px
         }
 }
