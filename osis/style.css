@@ -1,0 +1,189 @@
+body {
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  border-block-color: #dbedff;
+}
+
+::selection {
+  background: #dbedff;
+}
+
+section {
+  padding-top: 8rem;
+}
+
+.jumbotron {
+  padding-top: 7rem;
+  background-color: #ffffff;
+  color: #81c241;
+  background-image: url('./Bahan/Jumbotron/alaz-back.png');
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+    height: 665px
+    }
+
+#about {
+    color: #81c241; 
+    margin-top: 50px;
+    margin-bottom: 100px
+    }
+
+#fotopetinggi {
+    margin-top: -150px;
+    }
+
+
+
+
+
+.lead {
+  width: auto;
+  font-size: 15px;
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #dbedff; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.2em; /* Adjust as needed */
+  animation: typing 8s steps(37, end), blink-caret 1.75s step-end infinite;
+}
+
+.toast.fade {
+  transition: opacity 0.5s ease-in-out;
+}
+.toast.show {
+  opacity: 1;
+}
+.toast.hide {
+  opacity: 0;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #accbff;
+  }
+}
+
+#textaboutus {
+    margin-top: -50px
+    }
+
+hr:not([size]) {
+  height: 1px;
+}
+
+hr {
+  margin: 0 auto;
+  width: 30%;
+  padding: 1.2px;
+  color: var(--acsentColor);
+  margin-bottom: 2.4rem;
+  opacity: 100%;
+}
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  background-color: currentColor;
+  border: 0;
+  opacity: 0.25;
+}
+
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: auto;
+  margin-block-end: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+#skills {
+  background-color: #f4faff;
+}
+
+#skills img {
+  margin: 5px;
+  display: grid;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  overflow: scroll;
+  transition: all 0.3s;
+}
+
+#skills img:hover {
+  transform: scale(1.2);
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+#projects {
+  background-color: #ffffff;
+}
+
+.card {
+  transition: all 0.3s;
+  border-color: #accbff;
+  border-width: 2px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.carousel-inner {
+  border: 5px solid #accbff;
+}
+
+#contact {
+  background-color: #f4faff;
+}
+
+.site-footer {
+  background-color: #81c241;
+}
+
+a {
+  text-decoration: none;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal {
+  transform: translateY(0px);
+  opacity: 1;
+}

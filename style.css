@@ -1,0 +1,91 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+  transition: background-color 0.5s;
+}
+
+.navbar.scrolled {
+  background-color: #effffb !important;
+}
+
+.jumbotron {
+  background: url("./Resource/Jumbotron/bgsekolah.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Ensure relative positioning for overlay */
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Warna putih dengan opacity 0.7 */
+}
+
+.jumbotron .row {
+  align-items: center;
+}
+
+.jumbotron img {
+  max-width: 100%;
+}
+
+.jumbotron .display-4 {
+  color: #262262;
+}
+
+.jumbotron .lead {
+  color: #0b7012;
+}
+
+.card-title {
+  color: #262262;
+  font-weight: bold;
+}
+
+footer {
+  background: #f8f9fa;
+  color: #262262;
+}
+
+.bg-light {
+  background-color: #ffffff !important;
+}
+
+h1 {
+  color: #262262;
+}
+
+h2 {
+  color: #0b7012;
+}
+
+h3 {
+  color: #81c241;
+}
+
+.btn-primary {
+  background-color: #81c241;
+  border-color: #81c241;
+}
+
+.btn-primary:hover {
+  background-color: #8fd748;
+  border-color: #8fd748;
+}
+
+@media (max-width: 768px) {
+  .jumbotron {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+}
