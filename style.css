@@ -48,13 +48,8 @@ body {
 }
 
 .py-5 {
-    margin-top: 100px
+    margin-top: 50px
     }
-
-nav .logoimg {
-    transform: scale(0.85);
-    margin-left: -25px
-}
 
 .card-title {
   color: #262262;
@@ -92,8 +87,17 @@ h3 {
   border-color: #8fd748;
 }
 
-@media (max-width: 768px) {
-  .jumbotron {
-    height: 50vh; /* Adjust height for smaller screens */
-  }
+@media (max-width: 600px) {
+    body {
+        font-size: 90%;
+        }
+  nav .logoimg {
+        margin-top: -10px;
+        overflow: hidden;
+        transform: scale(0.7);
+        margin-left: -60px
+    }
+    #home .jumcontent {
+            transform: scale(0.8);
+        }
 }
