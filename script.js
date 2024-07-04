@@ -42,14 +42,3 @@ $(document).ready(function () {
     $(this).addClass("active");
   });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const greetings = ["SELAMAT DATANG", "SUGENG RAWUH", "WELCOME"];
-  const greetingElement = document.getElementById("greeting");
-
-  let index = 0;
-  setInterval(function () {
-    greetingElement.textContent = greetings[index];
-    index = (index + 1) % greetings.length;
-  }, 3000); // Ubah setiap 3 detik (3000 milidetik)
-});

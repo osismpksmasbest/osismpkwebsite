@@ -64,8 +64,14 @@ body {
 }
 
 .card {
+  transition: all 0.3s;
   max-width: 300px; /* Lebar maksimum card */
   margin: auto; /* Untuk membuat card berada di tengah */
+
+  border-width: 2px;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card-img-top {

@@ -7,6 +7,8 @@
     <link rel="icon" type="image/png" href="./Resource/Navbar/osis.png" alt="OSIS" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,7 +31,7 @@
         <div class="collapse navbar-collapse justify-content-end" style="font-size: 17px" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="./index.html#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./index.html#about">Tentang</a>
@@ -73,7 +75,7 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link" href="./index.html#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./index.html#about">Tentang</a>
@@ -109,11 +111,9 @@
 
     <!-- Divisi Section -->
     <section id="divisi" class="py-5">
-      <div class="container mt-5">
+      <div class="container mt-5" data-aos="fade-up">
         <div class="section-divider text-center">
           <h1>Anggota Inti</h1>
-          <hr />
-          <hr />
         </div>
         <div class="row justify-content-center">
           <!-- Kolom untuk Ketua dan Wakil Ketua -->
@@ -140,12 +140,6 @@
           </div>
         </div>
 
-        <div class="section-divider text-center">
-          <hr />
-
-          <hr />
-        </div>
-
         <div class="row justify-content-center">
           <!-- Kolom untuk Sekretaris -->
           <div class="col-md-4 mb-4">
@@ -169,12 +163,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="section-divider text-center">
-          <hr />
-
-          <hr />
         </div>
 
         <div class="row justify-content-center">
@@ -212,7 +200,34 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- Custom Script -->
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var offcanvasNavbar = document.getElementById("offcanvasNavbar");
+        var dropdownToggle = offcanvasNavbar.querySelector(".dropdown-toggle");
+
+        // Memeriksa apakah dropdown sedang dibuka atau tidak
+        var isDropdownOpen = false;
+
+        dropdownToggle.addEventListener("click", function () {
+          isDropdownOpen = !isDropdownOpen; // Toggle nilai setiap kali dropdown di klik
+        });
+
+        // Menutup offcanvas saat mengklik di luar area dropdown
+        offcanvasNavbar.addEventListener("click", function (event) {
+          var target = event.target;
+
+          if (!target.closest(".dropdown")) {
+            // Jika tidak mengklik pada area dropdown
+            var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasNavbar);
+            if (!isDropdownOpen) {
+              offcanvas.hide();
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
