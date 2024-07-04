@@ -6,6 +6,10 @@ body {
   transition: background-color 0.5s;
 }
 
+.homebutton {
+    margin-right: 30px
+    }
+
 .navbar-nav {
   display: inline-flex;
 }
@@ -125,6 +129,9 @@ h3 {
 @media (max-width: 600px) {
   body {
     font-size: 90%;
+  }
+  nav {
+    height: 12vh;
   }
   nav .logoimg {
     margin-top: -5px;
