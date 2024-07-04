@@ -10,17 +10,46 @@ $(document).ready(function () {
 
 AOS.init();
 
-//Navbar Links Active On Scroll
 $(document).ready(function () {
-  $("body").scrollspy({
-    target: "#navbar",
+  // Smooth scrolling using jQuery easing
+  $("a.nav-link").on("click", function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      const hash = this.hash;
+      const offset = 100; // Adjust the offset as needed
+
+      // Using jQuery's animate() method to add smooth page scroll
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top - offset,
+        },
+        100,
+        function () {
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+
+  // Navbar Links Active On Scroll
+  $("body").scrollspy({ target: "#navbarNav", offset: 100 });
+
+  // Navbar Links Active On Click
+  $(".navbar-nav").on("click", "a.nav-link", function () {
+    $(".navbar-nav").find("a.nav-link").removeClass("active");
+    $(this).addClass("active");
   });
 });
-//Navbar Links Active On Click
-const ul = document.querySelector(".navbar-nav");
-ul.addEventListener("click", (e) => {
-  if (e.target.className == "nav-link") {
-    ul.querySelectorAll("li a").forEach((el) => el.classList.remove("active"));
-    e.target.classList.add("active");
-  }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const greetings = ["SELAMAT DATANG", "SUGENG RAWUH", "WELCOME"];
+  const greetingElement = document.getElementById("greeting");
+
+  let index = 0;
+  setInterval(function () {
+    greetingElement.textContent = greetings[index];
+    index = (index + 1) % greetings.length;
+  }, 3000); // Ubah setiap 3 detik (3000 milidetik)
 });

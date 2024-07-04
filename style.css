@@ -6,19 +6,24 @@ body {
   transition: background-color 0.5s;
 }
 
+.navbar-nav {
+  display: inline-flex;
+}
+
+.icon-link {
+  margin-right: 20px; /* Jarak antara icon-link dengan elemen navbar lain */
+}
+
 .navbar.scrolled {
   background-color: #effffb !important;
 }
 
 .jumbotron {
-  /* */background: url("./Resource/Jumbotron/bgsekolah.jpg") no-repeat center center;
+  background: url("./Resource/Jumbotron/bgsekolah.jpg") no-repeat center center;
   background-size: cover;
   color: white;
-  background-position: center; 
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  position: relative; /* Ensure relative positioning for overlay */
+  position: relative;
+  overflow: hidden;
 }
 
 .jumbotron::before {
@@ -28,7 +33,14 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* Warna putih dengan opacity 0.7 */
+  background-color: rgba(255, 255, 255, 0.5); /* Warna putih dengan opacity 0.5 */
+  z-index: 1;
+}
+
+.jumbotron .jumcontent {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
 }
 
 .jumbotron .row {
@@ -48,12 +60,29 @@ body {
 }
 
 .py-5 {
-    margin-top: 50px
-    }
+  margin-top: 50px;
+}
 
-.card-title {
-  color: #262262;
-  font-weight: bold;
+.card {
+  max-width: 300px; /* Lebar maksimum card */
+  margin: auto; /* Untuk membuat card berada di tengah */
+}
+
+.card-img-top {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+.section-divider {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.section-divider hr {
+  width: 50px;
+  border-top: 2px solid #ccc;
 }
 
 footer {
@@ -88,26 +117,32 @@ h3 {
 }
 
 @media (max-width: 600px) {
-    body {
-        font-size: 90%;
-        }
+  body {
+    font-size: 90%;
+  }
   nav .logoimg {
-        margin-top: -5px;
-        overflow: hidden;
-        transform: scale(0.7);
-        margin-left: -60px
-    }
-    #home .jumcontent {
-            transform: scale(0.8);
-        }
+    margin-top: -5px;
+    overflow: hidden;
+    transform: scale(0.7);
+    margin-left: -60px;
+  }
+  #home .jumcontent {
+    transform: scale(0.8);
+  }
 }
 
 @media (max-width: 379.81px) {
-    .teksosismpkalaz {
-        display: none;
-    }
-    nav .logoimg {
-        margin-left: -20px;
-        margin-top: 5px
-        }
+  .teksosismpkalaz {
+    display: none;
+  }
+  nav .logoimg {
+    margin-left: -20px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 991px) {
+  .offcanvas {
+    background-color: #fff; /* Ganti dengan warna yang diinginkan untuk offcanvas di mobile */
+  }
 }
