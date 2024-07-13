@@ -17,7 +17,7 @@ $(document).ready(function () {
       event.preventDefault();
 
       const hash = this.hash;
-      const offset = 100; // Adjust the offset as needed
+      const offset = 70; // Adjust the offset as needed
 
       // Using jQuery's animate() method to add smooth page scroll
       $("html, body").animate(
@@ -27,14 +27,14 @@ $(document).ready(function () {
         100,
         function () {
           // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
+          history.replaceState(null, null, hash);
         }
       );
     }
   });
 
   // Navbar Links Active On Scroll
-  $("body").scrollspy({ target: "#navbarNav", offset: 100 });
+  $("body").scrollspy({ target: "#navbarNav", offset: 70 });
 
   // Navbar Links Active On Click
   $(".navbar-nav").on("click", "a.nav-link", function () {

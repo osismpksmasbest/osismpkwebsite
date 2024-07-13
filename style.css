@@ -84,6 +84,11 @@ body {
   height: auto;
 }
 
+section {
+  padding-top: 70px; /* Adjust this value according to the height of your navbar */
+  margin-top: -70px; /* This should be the same value as padding-top to ensure no extra space */
+}
+
 .section-divider {
   margin-top: 40px;
   margin-bottom: 20px;

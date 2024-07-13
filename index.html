@@ -376,10 +376,30 @@
         const greetingElement = document.getElementById("greeting");
 
         let index = 0;
-        setInterval(function () {
-          greetingElement.textContent = greetings[index];
-          index = (index + 1) % greetings.length;
-        }, 2000); // Ubah setiap 3 detik (3000 milidetik)
+        let charIndex = 0;
+        let currentText = "";
+        let isDeleting = false;
+
+        function type() {
+          if (isDeleting) {
+            currentText = greetings[index].substring(0, charIndex--);
+          } else {
+            currentText = greetings[index].substring(0, charIndex++);
+          }
+
+          greetingElement.textContent = currentText;
+
+          if (!isDeleting && charIndex === greetings[index].length) {
+            setTimeout(() => (isDeleting = true), 2000); // Tunggu 2 detik sebelum menghapus
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            index = (index + 1) % greetings.length;
+          }
+
+          setTimeout(type, isDeleting ? 50 : 100); // Kecepatan ketik dan hapus
+        }
+
+        type();
       });
     </script>
   </body>
