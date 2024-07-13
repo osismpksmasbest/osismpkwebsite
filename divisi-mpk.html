@@ -2,11 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Divisi MPK SMASBeSt</title>
     <link rel="icon" type="image/png" href="./Resource/Navbar/osis.png" alt="OSIS" />
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,124 +29,283 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" style="font-size: 17px" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#about">Tentang</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#visi-misi">Visi & Misi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#proker">Proker Unggulan</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="navbarDropdownDivisi" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Divisi </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownDivisi">
-                <li><a class="dropdown-item" href="./divisi-osis.html">Divisi OSIS</a></li>
-                <li><a class="dropdown-item" href="./divisi-mpk.html">Divisi MPK</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#galeri">Galeri</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#alumni">Alumni</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#blog">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./index.html#location">Lokasi</a>
-            </li>
-          </ul>
+          <a class="nav-link active homebutton" aria-current="page" href="index.html"><button type="button" class="btn btn-outline-dark">Back to home >></button></a>
         </div>
       </div>
     </nav>
 
     <!-- Offcanvas Navbar for Mobile -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas offcanvas-end" tabindex="1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu OSIS MPK</h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#about">Tentang</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#visi-misi">Visi & Misi</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#proker">Proker Unggulan</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDivisi" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Divisi </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownDivisi">
-              <li><a class="dropdown-item" href="./divisi-osis.html">Divisi OSIS</a></li>
-              <li><a class="dropdown-item" href="./divisi-mpk.html">Divisi MPK</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#galeri">Galeri</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#alumni">Apa Kata Alumni</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html#location">Lokasi</a>
-          </li>
-        </ul>
+        <a class="nav-link active" aria-current="page" href="index.html"><button type="button" class="btn btn-outline-success">Back to home >></button></a>
       </div>
     </div>
 
     <!-- Divisi Section -->
     <section id="divisi" class="py-5">
-      <div class="container">
-        <h2 class="text-center">Divisi OSIS</h2>
-        <div class="row">
-          <div class="col-md-6">
-            <h3>Divisi 1</h3>
-            <p>Deskripsi singkat tentang Divisi 1.</p>
-            <ul>
-              <li>Member 1</li>
-              <li>Member 2</li>
-              <li>Member 3</li>
-            </ul>
+      <div class="container mt-5" data-aos="fade-up">
+        <div class="section-divider text-center">
+          <h1>Anggota Inti</h1>
+        </div>
+        <div class="row justify-content-center">
+          <!-- Kolom untuk Ketua dan Wakil Ketua -->
+          <div class="col-md-4 mb-4">
+            <!-- Ketua -->
+            <div class="card">
+              <img src="./Resource/Divs/MPK/Inti/daffa.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Ketua" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Ketua 1</h5>
+                <p class="card-text">Muhammad Daffa Raditya S</p>
+                <p class="card-text" style="font-style: italic">"berorganisasi sangatlah menyenangkan"</p>
+                <a href="https://www.instagram.com/daffardity" class="btn btn-outline-success stretched-link">@daffardity</a>
+              </div>
+            </div>
           </div>
-          <div class="col-md-6">
-            <h3>Divisi 2</h3>
-            <p>Deskripsi singkat tentang Divisi 2.</p>
-            <ul>
-              <li>Member 1</li>
-              <li>Member 2</li>
-              <li>Member 3</li>
-            </ul>
+
+          <div class="col-md-4 mb-4">
+            <!-- Wakil Ketua -->
+            <div class="card">
+              <img src="./Resource/Divs/MPK/Inti/ifath.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Wakil Ketua" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Ketua 2</h5>
+                <p class="card-text">Muhammad Fathin Putra Himawan</p>
+                <p class="card-text" style="font-style: italic">"keren kak rawrr"</p>
+                <a href="https://www.instagram.com/fathinputraa" class="btn btn-outline-success stretched-link">@fathinputraa</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Anda dapat menambahkan divisi lain di sini -->
+        <div class="row justify-content-center">
+          <!-- Kolom untuk Bendahara -->
+          <div class="col-md-4 mb-4">
+            <!-- Bendahara 1 -->
+            <div class="card">
+              <img src="./Resource/Divs/MPK/Inti/janma.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Sekretaris 1" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Bendahara</h5>
+                <p class="card-text">Janma Nararya Prasetyo</p>
+                <p class="card-text" style="font-style: italic">"be yourself"</p>
+                <a href="https://www.instagram.com/" class="btn btn-outline-success stretched-link">Instagram Account</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center" style="margin-bottom: 150px">
+          <!-- Kolom untuk Sekretaris -->
+          <div class="col-md-4 mb-4">
+            <!-- Sekretaris 1 -->
+            <div class="card">
+              <img src="./Resource/Divs/MPK/Inti/jasmineg.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Bendahara 1" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Sekretaris 1</h5>
+                <p class="card-text">Jasmine Ge Ellgreen</p>
+                <p class="card-text" style="font-style: italic">"more espresso less depresso"</p>
+                <a href="https://www.instagram.com/metoalinoodlee_" class="btn btn-outline-success stretched-link">@metoalinoodlee_</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <!-- Sekretaris 2 -->
+            <div class="card">
+              <img src="./Resource/Divs/MPK/Inti/alifia.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Bendahara 2" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Sekretaris 2</h5>
+                <p class="card-text">Alifia Quinsy Yustisia</p>
+                <p class="card-text" style="font-style: italic">"be yourself"</p>
+                <a href="https://www.instagram.com/" class="btn btn-outline-success stretched-link">Instagram Account</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <!-- Sekretaris 3 -->
+            <div class="card">
+              <img src="./Resource/Divs/MPK/Inti/jasminep.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Bendahara 2" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Sekretaris 3</h5>
+                <p class="card-text">Jasmine Putria Dennis</p>
+                <p class="card-text" style="font-style: italic">"When you stop chasing perfection in others' eyes and start pursuing personal growth, you find true freedom."</p>
+                <a href="https://www.instagram.com/jsmnace_" class="btn btn-outline-success stretched-link">@jsmnace_</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divisi -->
+
+        <!-- Divisi -->
+        <div class="section-divider text-center">
+          <h1>Divisi A</h1>
+          <p style="font-style: italic">"Memantau program kerja dan kegiatan OSIS."</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D1/wisnu.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Ketua" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Ketua</h5>
+                <p class="card-title">Arya Wisnutama</p>
+                <p class="card-text" style="font-style: italic">"be yourself"</p>
+                <a href="https://www.instagram.com/" class="btn btn-outline-success stretched-link">Instagram Account</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D1/chika.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Wakil Ketua" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Anggota</h5>
+                <p class="card-title">Maura Kayla Fianchika</p>
+                <p class="card-text" style="font-style: italic">"Fight for your fairytale"</p>
+                <a href="https://www.instagram.com/maurakaylaf" class="btn btn-outline-success stretched-link">@maurakaylaf</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center" style="margin-bottom: 150px">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D1/nadya.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Sekretaris 1" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Anggota</h5>
+                <p class="card-title">Nadya Aulia Nurhaliza</p>
+                <p class="card-text" style="font-style: italic">"Allah knows what best for you"</p>
+                <a href="https://www.instagram.com/nadya_aulializa" class="btn btn-outline-success stretched-link">@nadya_aulializa</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divisi B -->
+        <div class="section-divider text-center">
+          <h1>Divisi B</h1>
+          <p style="font-style: italic">"Mengadakan forum diskusi atau survei untuk mengumpulkan aspirasi siswa."</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D2/fariz.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Ketua" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Ketua</h5>
+                <p class="card-title">Muhammad Hayyun Alfarizky</p>
+                <p class="card-text" style="font-style: italic">"sabarlah, sesuatu yang indah butuh waktu"</p>
+                <a href="https://www.instagram.com/mha_fariz_" class="btn btn-outline-success stretched-link">@mha_fariz_</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D2/ibas.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Wakil Ketua" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Anggota</h5>
+                <p class="card-title">Baswara Hafidzh Muttaqin</p>
+                <p class="card-text" style="font-style: italic">"Jalani Hidupmu Seolah olah Semua Sudah Di Atur Untuk Kebaikanmu."</p>
+                <a href="https://www.instagram.com/baswara.hm" class="btn btn-outline-success stretched-link">@baswara.hm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D2/luna.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Sekretaris 1" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Anggota</h5>
+                <p class="card-title">Nadhifa Lunandita Syahira</p>
+                <p class="card-text" style="font-style: italic">"don't be too hard on yourself, because it's okay to make mistakes"</p>
+                <a href="https://www.instagram.com/nndhfaaa" class="btn btn-outline-success stretched-link">@nndhfaaa</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D2/aqsa.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Sekretaris 1" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Anggota</h5>
+                <p class="card-title">Aqsa Firdaus Putra Saroso</p>
+                <p class="card-text" style="font-style: italic">"The best way to predict the future is to create it"</p>
+                <a href="https://www.instagram.com/aqsaptra_" class="btn btn-outline-success stretched-link">@aqsaptra_</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center" style="margin-bottom: 150px">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D2/naurah.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Sekretaris 1" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Anggota</h5>
+                <p class="card-title">Adinda Naurah Azizah</p>
+                <p class="card-text" style="font-style: italic">"changes your mindset, changes your world"</p>
+                <a href="https://www.instagram.com/nrzhdnn" class="btn btn-outline-success stretched-link">@nrzhdnn</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="./Resource/Divs/MPK/D2/vico.png" style="width: 300px; height: 350px" class="card-img-top" alt="Foto Sekretaris 1" />
+              <div class="card-body text-center">
+                <h5 class="card-title">Anggota</h5>
+                <p class="card-title">Vico Agustino Suryanto</p>
+                <p class="card-text" style="font-style: italic">"be yourself"</p>
+                <a href="https://www.instagram.com/" class="btn btn-outline-success stretched-link">Instagram Account</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PEMBATAS -->
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="text-center py-4">
-      <p>&copy; 2024 OSIS. All Rights Reserved.</p>
+      <p>&copy; 2024 OSIS MPK SMASBeSt IT Division. All Rights Reserved.</p>
     </footer>
     <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-whaterverintegrity" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-whaterverintegrity" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@next/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom Script -->
     <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var offcanvasNavbar = document.getElementById("offcanvasNavbar");
+        var dropdownToggle = offcanvasNavbar.querySelector(".dropdown-toggle");
+
+        // Memeriksa apakah dropdown sedang dibuka atau tidak
+        var isDropdownOpen = false;
+
+        dropdownToggle.addEventListener("click", function () {
+          isDropdownOpen = !isDropdownOpen; // Toggle nilai setiap kali dropdown di klik
+        });
+
+        // Menutup offcanvas saat mengklik di luar area dropdown
+        offcanvasNavbar.addEventListener("click", function (event) {
+          var target = event.target;
+
+          if (!target.closest(".dropdown")) {
+            // Jika tidak mengklik pada area dropdown
+            var offcanvas = bootstrap.Offcanvas.getInstance(offcanvasNavbar);
+            if (!isDropdownOpen) {
+              offcanvas.hide();
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
