@@ -113,7 +113,9 @@
         <div class="container">
           <div class="row align-items-center justify-content-center">
             <div class="col-md-6" data-aos="zoom-in">
-              <h1 id="greeting" style="margin-top: 15vh; margin-left: -30px; margin-right: -30px; font-size: 70px; font-weight: bold">SELAMAT DATANG</h1>
+              <div id="greeting-container">
+                <h1 id="greeting" style="margin-top: 15vh; margin-left: -30px; margin-right: -30px; font-size: 70px; font-weight: bold">SELAMAT DATANG</h1>
+              </div>
               <p class="lead">Website OSIS MPK SMA Al Azhar Syifa Budi Solo</p>
             </div>
             <div class="col-md-6" data-aos="zoom-in">
@@ -376,30 +378,10 @@
         const greetingElement = document.getElementById("greeting");
 
         let index = 0;
-        let charIndex = 0;
-        let currentText = "";
-        let isDeleting = false;
-
-        function type() {
-          if (isDeleting) {
-            currentText = greetings[index].substring(0, charIndex--);
-          } else {
-            currentText = greetings[index].substring(0, charIndex++);
-          }
-
-          greetingElement.textContent = currentText;
-
-          if (!isDeleting && charIndex === greetings[index].length) {
-            setTimeout(() => (isDeleting = true), 2000); // Tunggu 2 detik sebelum menghapus
-          } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            index = (index + 1) % greetings.length;
-          }
-
-          setTimeout(type, isDeleting ? 50 : 100); // Kecepatan ketik dan hapus
-        }
-
-        type();
+        setInterval(function () {
+          greetingElement.textContent = greetings[index];
+          index = (index + 1) % greetings.length;
+        }, 2000); // Ubah setiap 3 detik (3000 milidetik)
       });
     </script>
   </body>
