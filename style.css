@@ -19,7 +19,6 @@ body {
   align-items: center;
 }
 
-
 .icon-link {
   margin-right: 20px; /* Jarak antara icon-link dengan elemen navbar lain */
 }
@@ -106,37 +105,36 @@ section {
   border-top: 2px solid #ccc;
 }
 
-
 /**/
 
 .divisionbutton {
-    text-align: center; /* Centers the content */
-    position: relative;
+  text-align: center; /* Centers the content */
+  position: relative;
+  margin: 0 5px; /* Adjust this to control the space between buttons on desktop */
 }
 
 .buttonA {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .buttonA img {
-    display: block;
-    width: 300px; 
-    height: 350px
+  display: block;
+  width: 300px;
+  height: 350px;
 }
 
 .divisionbutton-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-    pointer-events: none; /* Ensures the text is not clickable */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  pointer-events: none; /* Ensures the text is not clickable */
 }
-
 
 /**/
 
