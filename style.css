@@ -116,8 +116,6 @@ section {
 
 .divisionbutton img {
     transition: opacity 0.3s ease, background-color 0.3s ease;
-    display: block;
-    background-color: transparent;
 }
 
 .divisionbutton:hover img {
