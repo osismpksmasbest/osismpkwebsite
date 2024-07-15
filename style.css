@@ -220,7 +220,8 @@ h3 {
     margin-top: -5px;
     overflow: hidden;
     transform: scale(0.6);
-    margin-left: -70px;
+    transform-origin: right;
+    margin-left: -140px;
   }
   #home .jumcontent {
     transform: scale(0.8);
