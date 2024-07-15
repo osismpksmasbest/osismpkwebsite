@@ -112,16 +112,20 @@ section {
 .divisionbutton {
     text-align: center; /* Centers the content */
     position: relative;
+    bakcground-color: black;
 }
 
 .divisionbutton img {
     transition: opacity 0.3s ease, background-color 0.3s ease;
+    opacity: 0.7;
 }
 
+/*
 .divisionbutton:hover img {
-    opacity: 0.5; /* Mengatur transparansi */
-    background-color: #000000; /* Memberikan efek transparan ke hitam */
+    opacity: 0.5; 
+    background-color: #000000; 
 }
+*/
 
 .buttonA {
     display: inline-block;
