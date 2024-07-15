@@ -120,12 +120,10 @@ section {
     opacity: 0.7;
 }
 
-/*
 .divisionbutton:hover img {
     opacity: 0.5; 
     background-color: #000000; 
 }
-*/
 
 .buttonA {
     display: inline-block;
