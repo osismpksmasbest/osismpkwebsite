@@ -114,6 +114,17 @@ section {
     position: relative;
 }
 
+.divisionbutton img {
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    display: block;
+    background-color: transparent;
+}
+
+.divisionbutton:hover img {
+    opacity: 0.5; /* Mengatur transparansi */
+    background-color: #000000; /* Memberikan efek transparan ke hitam */
+}
+
 .buttonA {
     display: inline-block;
     position: relative;
